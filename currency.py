@@ -19,10 +19,8 @@ btc_dic = json_dict[2]
 
 root = Tk()
 root.geometry('450x320+500+200')
-root.title('Currency')
-
-
-# root.iconbitmap('dol.ico')
+root.title('Конвертер валют')
+root.resizable(False, False)
 
 
 def change():
