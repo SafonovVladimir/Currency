@@ -23,11 +23,16 @@ f_cur.pack()
 
 j = 0
 for i in json_dict:
-    l = Label(f_cur).grid(row=0, column=j)
-    l_ccy = Label(f_cur, text=i.get('ccy'), font='Arial 10', height=2, width=10).grid(row=2, column=j)
-    l_base = Label(f_cur, text=i.get('base_ccy'), font='Arial 10', height=2, width=10).grid(row=3, column=j)
-    l_buy = Label(f_cur, text=i.get('buy'), font='Arial 10', height=2, width=10).grid(row=4, column=j)
-    l_sale = Label(f_cur, text=i.get('sale'), font='Arial 10', height=2, width=10).grid(row=5, column=j)
+    l = Label(f_cur)
+    l.grid(row=0, column=j)
+    l_ccy = Label(f_cur, text=i.get('ccy'), font='Arial 10', height=2, width=10)
+    l_ccy.grid(row=2, column=j)
+    l_base = Label(f_cur, text=i.get('base_ccy'), font='Arial 10', height=2, width=10)
+    l_base.grid(row=3, column=j)
+    l_buy = Label(f_cur, text=i.get('buy'), font='Arial 10', height=2, width=10)
+    l_buy.grid(row=4, column=j)
+    l_sale = Label(f_cur, text=i.get('sale'), font='Arial 10', height=2, width=10)
+    l_sale.grid(row=5, column=j)
     j += 1
 
 root.mainloop()
