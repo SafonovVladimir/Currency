@@ -30,10 +30,11 @@ def change():
     if sum != "":
         l_usd_in['text'] = '{0:.2f}'.format(sum * float(usd_dic.get("buy")), 2)
         l_eur_in['text'] = '{0:.2f}'.format(sum * float(euro_dic.get("buy")), 2)
-        l_btc_in['text'] = '{0:.2f}'.format(sum * float(btc_dic.get("buy")), 2)
+        l_btc_in['text'] = '{0:.2f}'.format(sum * float(usd_dic.get("buy")) * float(btc_dic.get("buy")), 2)
         l_usd_out['text'] = '{0:.2f}'.format(sum * float(usd_dic.get("sale")), 2)
         l_eur_out['text'] = '{0:.2f}'.format(sum * float(euro_dic.get("sale")), 2)
-        l_btc_out['text'] = '{0:.2f}'.format(sum * float(btc_dic.get("sale")), 2)
+        l_btc_out['text'] = '{0:.2f}'.format(sum * float(usd_dic.get("sale")) * float(btc_dic.get("sale")), 2)
+
 
 l_title = Label(root, text=f'Курс на {date_now}', font='Arial 15')
 l_title.pack(fill=X, expand=0)
